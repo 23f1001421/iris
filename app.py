@@ -7,7 +7,7 @@ app = FastAPI()
 
 # Train model at startup
 iris = load_iris()
-model = DecisionTreeClassifier(random_state=42)
+model = DecisionTreeClassifier(random_state=42, max_depth=3)
 model.fit(iris.data, iris.target)
 class_names = ["setosa", "versicolor", "virginica"]
 
