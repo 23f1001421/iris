@@ -5,7 +5,6 @@ import numpy as np
 
 app = FastAPI()
 
-# Train model at startup
 iris = load_iris()
 model = DecisionTreeClassifier(random_state=42, max_depth=3)
 model.fit(iris.data, iris.target)
